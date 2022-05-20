@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Home page </title>
+
+</head>
+<body>
+    <!--adding image -->
+     <div class="header-image-div">
+       <img src="frontpic.jpeg" alt=" header image"> 
+   </div>
+   <!--menu-->
+   <ul class="menu">
+       <li><a href="index.html"> Home </a></li>
+       <li><a href="about.html"> About </a></li>
+       <li><a href="Courses.html"> Courses <i class="fa-duotone fa-chevron-down"></i> </a>
+        <ul>
+            <li><a href="HTML.html"> HTML </a></li>
+            <li><a href="CSS.html"> CSS </a></li>
+            <li><a href="JS.html"> JS </a></li>
+            <li><a href="PHP.html"> PHP </a></li>
+            <li><a href="JAVA.html"> JAVA </a></li>
+            <li><a href="OOP.html"> OOP </a></li>
+
+
+        </ul>
+    </li>
+       <li><a href="registration.html"> Registration </a></li>
+       <li><a href="login.html"> Login </a></li>
+       <li><a href="contact.html"> Contact </a></li>
+    
+   </ul> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br>
+
+   <div class = "container">
+    <span id="hours">00</span>
+    <span>:</span>
+    <span id="minutes">00</span>
+    <span>:</span>
+    <span id="seconds">00</span>
+    <span id="session">AM</span>
+    <script>
+        function displayTime(){
+            var dateTime = new Date();
+            var hrs = dateTime.getHours();
+            var min = dateTime.getMinutes();
+            var sec = dateTime.getSeconds();
+            var session = document.getElementById('session');
+            if(hrs >= 12){
+                session.innerHTML = 'PM';
+            }
+            else{
+                session.innerHTML = 'AM';
+            }
+            if(hrs>12){
+                hrs= hrs - 12;
+            }
+            document.getElementById('hours').innerHTML= hrs ;
+            document.getElementById('minutes').innerHTML= min ;
+            document.getElementById('seconds').innerHTML= sec ;
+        }
+        setInterval(displayTime,10);
+    </script>
+
+</div>
+
+   <div class="image-div">
+    <img src="leaading pic.png" alt=" header image" border="30px" width="1300"> 
+</div>
+   
+   <div class="footer-area">
+       <h2>Contact</h2>
+       <p>Leading University </p>
+       <p>Rgibnagar,South Surma,Sylhet</p>
+       <p> phone:0125212254</p>
+       <p>email= info@lus.ac.bd</p>
+   </div>
+   <footer class="footer-bottom-area">
+       <p>&copy;All Rights Reserved</p>
+   </footer>
+   
+</body>
+</html>
